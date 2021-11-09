@@ -1,15 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 :root {
-  --accent1: #e87222;
+  --accent1: #e87122ad;
   --head1: #5385c1;
   --accent2: #5385c19b;
   --grigio: #9a9a9a;
+  --bianco: #f1f1f1;
   --shadow: 2px 2px 12px rgba(0, 0, 0, 0.692);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--accent2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent1);
+  border-radius: 10px;
 }
 
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -52,19 +65,26 @@ html .button:hover {
 }
 
 html .button2 a {
-  text-shadow: var(--shadow);
-  padding: .5rem 1rem;
-  border: 1px solid white;
-  border-radius: 3px;
+  padding: .7rem 1.2rem;
+  border: 1px solid var(--head1);
+  border-radius: 5px;
   background-color: var(--head1);
   margin: 1rem;
-  font-size: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 51px;
   color: white;
 }
 
+@media only screen and (max-width: 1400px) {
+  html .button2 a {
+    font-size: 12px;
+  }
+}
+
 html .button2 a:hover {
-  background-color: var(--accent2);
-  color: white;
+  background-color: white;
+  color: var(--head1);
 }
 
 /* NAV */
@@ -72,6 +92,8 @@ html .button2 a:hover {
   height: 100vh;
   background-image: url(../img/banner.jpg);
   background-position: center;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
 }
 
 .landing nav {
@@ -96,7 +118,7 @@ html .button2 a:hover {
   color: var(--head1);
 }
 
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 800px) {
   .landing nav h3 {
     display: none;
   }
@@ -122,7 +144,7 @@ html .button2 a:hover {
   color: var(--head1);
 }
 
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 800px) {
   .landing nav {
     position: absolute;
     bottom: 1px;
@@ -148,7 +170,7 @@ html .button2 a:hover {
   display: none;
 }
 
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 800px) {
   .landing .info-l .h2small {
     display: contents;
   }
@@ -163,7 +185,7 @@ html .button2 a:hover {
   color: white;
 }
 
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 800px) {
   .landing .info-l h1 {
     margin-top: 2rem;
     font-size: 35px;
@@ -177,7 +199,7 @@ html .button2 a:hover {
   color: white;
 }
 
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 800px) {
   .landing .info-l p {
     font-size: 14px;
     line-height: 1.4rem;
@@ -221,6 +243,11 @@ html .button2 a:hover {
 }
 
 /* Samples */
+#samples {
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+
 #samples .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -230,7 +257,7 @@ html .button2 a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin-top: 3rem;
+  margin: 1rem 0 5rem 0;
 }
 
 #samples .header h2 {
@@ -250,6 +277,12 @@ html .button2 a:hover {
   padding: 0 3rem;
 }
 
+@media only screen and (max-width: 800px) {
+  #samples .container {
+    padding: 0;
+  }
+}
+
 #samples .container .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,12 +290,35 @@ html .button2 a:hover {
   padding: 1rem 5rem;
 }
 
+@media only screen and (max-width: 800px) {
+  #samples .container .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+}
+
 #samples .container .row .card {
   border-radius: 20px;
   border-top: 1px var(--grigio) solid;
   border-bottom: 1px var(--grigio) solid;
   width: 70%;
-  margin: 2rem;
+  margin: 2rem 1rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  #samples .container .row .card {
+    text-align: center;
+    margin: 2rem .3rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #samples .container .row .card {
+    margin: 2rem auto;
+  }
 }
 
 #samples .container .row .card .card-title h3 {
@@ -273,8 +329,20 @@ html .button2 a:hover {
 }
 
 #samples .container .row .card .image-sample img {
-  width: 100%;
+  width: 80%;
   padding: 1rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  #samples .container .row .card .image-sample img {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #samples .container .row .card .image-sample img {
+    width: 100%;
+  }
 }
 
 #samples .container .row .card p {
@@ -287,6 +355,79 @@ html .button2 a:hover {
 
 #samples .container .row .card-footer {
   padding: 1rem;
+}
+
+/* 3D */
+#Art {
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  background-color: var(--bianco);
+}
+
+#Art ::-webkit-scrollbar {
+  width: 0px;
+}
+
+#Art .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin: 0rem 0 5rem 0;
+}
+
+#Art .header h2 {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 72px;
+  color: var(--head1);
+  margin: 3rem 0 0 0;
+}
+
+#Art .header p {
+  font-weight: 700;
+  line-height: 29px;
+  font-size: 17px;
+}
+
+#Art .row-art {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 3rem;
+}
+
+#Art .row-art .column-art {
+  -webkit-box-flex: 33%;
+      -ms-flex: 33%;
+          flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+#Art .row-art .column-art img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  #Art .row-art .column-art {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    max-width: 100%;
+    padding: 2rem;
+  }
 }
 
 /* ObserverJS */
@@ -386,7 +527,7 @@ html .button2 a:hover {
   cursor: pointer;
   position: fixed;
   bottom: 50px;
-  right: 1px;
+  right: 5px;
   background-color: white;
   color: black;
   text-align: center;
@@ -396,6 +537,7 @@ html .button2 a:hover {
           box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.116);
   text-decoration: none;
   z-index: 999;
+  border: 1px solid var(--head1);
 }
 
 #back2Top:hover {
