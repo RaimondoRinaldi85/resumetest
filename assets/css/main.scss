@@ -2,8 +2,9 @@
 
 :root {
 	--accent1: #e87222;
-	--accent2: #1461FB;
 	--head1: #5385c1;
+	--accent2: #5385c19b;
+    --grigio: #9a9a9a;
     --shadow: 2px 2px 12px rgba(0, 0, 0, 0.692);
   }
 
@@ -42,7 +43,21 @@ html{
         background-color: white;
         margin: 1rem;
         font-size: 14px;
-        color: var(--accent2);
+        color: var(--head1);
+        &:hover{
+            background-color: var(--head1);
+            color: white;
+        }
+    }
+    .button2 a{
+        text-shadow: var(--shadow);
+        padding: .5rem 1rem;
+        border: 1px solid white;
+        border-radius: 3px;
+        background-color: var(--head1);
+        margin: 1rem;
+        font-size: 14px;
+        color: white;
         &:hover{
             background-color: var(--accent2);
             color: white;
@@ -53,6 +68,12 @@ html{
 @mixin small {
     @media only screen and (max-width: 766px) {
       @content;
+    }
+  }
+
+  @mixin large {
+    @media screen and (min-width: 600px) {
+      @content;  
     }
   }
 
@@ -162,9 +183,61 @@ html{
 }
 
 
+/* Samples */
 
-
-
+#samples{
+    .header{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 3rem;
+        h2{
+            font-weight: 300;
+            font-size: 48px;
+            line-height: 72px;
+            color: var(--head1);
+        }
+        p{
+            font-weight: 700;
+            line-height: 29px;
+            font-size: 17px;
+        }
+    }
+    .container{
+        padding: 0 3rem;
+        .row{
+            display: flex;
+            padding: 1rem 5rem;
+            .card{
+                border-radius: 20px;
+                border-top: 1px var(--grigio) solid;
+                border-bottom: 1px var(--grigio) solid;
+                width: 70%;
+                margin: 2rem;
+                .card-title h3{
+                    padding: 1rem;
+                    font-weight: 300;
+                    font-size: 23px;
+                    color: var(--head1);
+                }
+                .image-sample img{
+                    width: 100%;
+                    padding: 1rem;
+                }
+                p{
+                    padding: 1rem;
+                    font-weight: 300;
+                    color: var(--grigio);
+                    font-size: 17px;
+                    line-height: 29px;
+                }
+            }
+            .card-footer{
+                padding: 1rem;
+            }
+        }
+    }
+}
 
 
 
