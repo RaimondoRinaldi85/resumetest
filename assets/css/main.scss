@@ -24,13 +24,13 @@
       @content;
     }
   }
-@mixin medium {
+  @mixin medium {
     @media only screen and (max-width: 1400px) {
       @content;
     }
   }
-@mixin large {
-    @media only screen and (max-width: 1000px) {
+  @mixin large {
+    @media only screen and (max-width: 1600px) {
       @content;
     }
   }
@@ -282,9 +282,10 @@ html{
 
 /* 3D */
 
-#Art {
+#art {
+    background: linear-gradient(-45deg, #E19D5D, rgba(255, 255, 255, 0.493), #1461FB);
     box-shadow: var(--shadow);
-    background-color: var(--bianco);
+       height: 100vh;
     ::-webkit-scrollbar {
         width: 0px;
       }
@@ -309,10 +310,13 @@ html{
     .row-art {
         overflow:scroll; 
         overflow-x: hidden;
-        height: 600px;
+        height: 500px;
         display: flex;
         flex-wrap: wrap;
         margin: 0 3rem;
+        @include small{
+        box-shadow: var(--shadow);
+    }
     .column-art {
       flex: 33%;
       max-width: 33%;
@@ -321,6 +325,7 @@ html{
         margin-top: 8px;
         vertical-align: middle;
         width: 100%;
+        border-radius: 3px;
         }
       @include small{
         flex: 100%;
@@ -331,6 +336,75 @@ html{
   }
 }
 
+#websites{
+    .header{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 0 5rem 0;
+        h2{
+            font-weight: 300;
+            font-size: 48px;
+            line-height: 72px;
+            color: var(--head1);
+            margin: 3rem 0 0 0;
+        }
+        p{
+            font-weight: 700;
+            line-height: 29px;
+            font-size: 17px;
+        }
+    }
+    .sites{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0 2rem;
+        @include medium {
+            padding: 0 .5rem;
+        }
+        .card-s{
+            padding: .5rem;
+            border-top: 1px solid var(--grigio);
+            border-bottom: 1px solid var(--grigio);
+            border-radius: 20px;
+            margin: 2rem;
+            @include medium {
+                margin: 1rem;
+            }
+            img{
+                width: 100%;
+                @include medium {
+                    width: 80%;
+                }
+                @include small {
+                    width: 100%;
+                }
+            }
+        }
+            h3{
+                margin: .5rem 1rem;
+                font-weight: 300;
+                font-size: 23px;
+                line-height: 35px;
+                color: var(--head1);
+                @include medium {
+                    font-size: 19px;
+                    width: 50%;
+                }
+            }
+            p{
+                margin: .5rem 1rem;
+                font-weight: 300;
+                font-size: 17px;
+                line-height: 29px;
+                color: var(--grigio);
+                @include medium {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 
 
 
