@@ -114,6 +114,8 @@ html{
     background-image: url(../img/banner.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+	background-repeat: no-repeat;
     box-shadow: var(--shadow);
     nav{
     display: flex;
@@ -302,6 +304,7 @@ html{
 /* 3D */
 
 #art {
+    padding-bottom: 10rem;
     background: linear-gradient(-45deg, #E19D5D, rgba(255, 255, 255, 0.493), #1461FB);
     box-shadow: var(--shadow);
        height: 100vh;
@@ -335,6 +338,7 @@ html{
         margin: 0 3rem;
         @include small{
         box-shadow: var(--shadow);
+        height: 400px;
     }
     .column-art {
       flex: 33%;
@@ -358,6 +362,7 @@ html{
 /* Websites */
 
 #websites{
+    margin-bottom: 6rem;
     .header{
         display: flex;
         flex-direction: column;
@@ -430,6 +435,7 @@ html{
     /* Videos */
 
     #videos{
+        padding-bottom: 6rem;
         background: linear-gradient(-45deg, #E19D5D, rgba(255, 255, 255, 0.493), #1461FB);
         box-shadow: var(--shadow);
         height: 100%;
@@ -470,6 +476,23 @@ html{
     footer{
         text-align: center;
         padding: 1rem;
+        .icons-f{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 3rem;
+            li{
+                transform: translateX(50%);
+                font-size: 40px;
+                margin: 2.5rem 1.5rem 0 0;
+                a{
+                    font-size: 35px;
+                    color: var(--grigio);
+                    &:hover{
+                        color: var(--head1);
+                    }
+                }
+            }
+        }
         p{
             color: var(--grigio);
             @include small{
@@ -489,6 +512,8 @@ html{
         background-image: url(../img/banner2.jpg);
         background-position: center;
         background-size: cover;
+        background-attachment: fixed;
+		background-repeat: no-repeat;
         box-shadow: var(--shadow);
             nav{
                 display: flex;
@@ -585,6 +610,7 @@ html{
 /* Experiences */
 
 #exp{
+    padding-bottom: 5rem;
     .header{
         display: flex;
         flex-direction: column;
@@ -707,7 +733,85 @@ html{
     }
 }
 
+/* Edu */
 
+#edu{
+    background-image: url('../img/banner.jpg');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 5rem;
+        box-shadow: var(--shadow);
+        .header h1{
+            font-size: 52px;
+            line-height: 52px;
+            font-weight: 300;
+            color: white;
+            margin-top: 3rem;
+        }
+        .content{
+            h2{
+                text-transform: uppercase;
+                color: var(--head1);
+                font-size: 25px;
+                line-height: 26px;
+                font-weight: 400;
+                margin: 3rem auto 1rem auto;
+            }
+            p{
+                color: white;
+                font-weight: 300;
+                font-size: 17px;
+                line-height: 29px;
+            }
+            h3{
+                color: white;
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 29px;
+                
+            }
+        }
+        hr{
+            margin-top: 3rem;
+        }
+}
+
+/* About Me */
+
+#about{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .header h1{
+        font-size: 52px;
+        line-height: 52px;
+        font-weight: 300;
+        color: var(--head1);
+        margin-top: 3rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 10% auto 10%;
+        .content{
+            grid-column-start: 2;
+            p{
+                margin-top: 4rem;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 29px;
+                border-radius: 20px;
+                padding: 3rem;
+                border-top: 1px solid #1461fb78;
+                border-bottom: 1px solid #e19d5d93;
+            }
+        }
+    }
+}
 
 
 

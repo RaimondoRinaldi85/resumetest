@@ -112,6 +112,8 @@ html .button2 a:hover {
   background-image: url(../img/banner.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
 }
@@ -385,6 +387,7 @@ html .button2 a:hover {
 
 /* 3D */
 #art {
+  padding-bottom: 10rem;
   background: linear-gradient(-45deg, #E19D5D, rgba(255, 255, 255, 0.493), #1461FB);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
@@ -437,6 +440,7 @@ html .button2 a:hover {
   #art .row-art {
     -webkit-box-shadow: var(--shadow);
             box-shadow: var(--shadow);
+    height: 400px;
   }
 }
 
@@ -466,6 +470,10 @@ html .button2 a:hover {
 }
 
 /* Websites */
+#websites {
+  margin-bottom: 6rem;
+}
+
 #websites .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -571,6 +579,7 @@ html .button2 a:hover {
 
 /* Videos */
 #videos {
+  padding-bottom: 6rem;
   background: linear-gradient(-45deg, #E19D5D, rgba(255, 255, 255, 0.493), #1461FB);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
@@ -628,6 +637,32 @@ footer {
   padding: 1rem;
 }
 
+footer .icons-f {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 3rem;
+}
+
+footer .icons-f li {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  font-size: 40px;
+  margin: 2.5rem 1.5rem 0 0;
+}
+
+footer .icons-f li a {
+  font-size: 35px;
+  color: var(--grigio);
+}
+
+footer .icons-f li a:hover {
+  color: var(--head1);
+}
+
 footer p {
   color: var(--grigio);
 }
@@ -646,6 +681,8 @@ footer p {
   background-image: url(../img/banner2.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
 }
@@ -786,6 +823,10 @@ footer p {
 }
 
 /* Experiences */
+#exp {
+  padding-bottom: 5rem;
+}
+
 #exp .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -971,6 +1012,104 @@ footer p {
   line-height: 18px;
   color: var(--head1);
   margin-top: 4rem;
+}
+
+/* Edu */
+#edu {
+  background-image: url("../img/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding-bottom: 5rem;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+
+#edu .header h1 {
+  font-size: 52px;
+  line-height: 52px;
+  font-weight: 300;
+  color: white;
+  margin-top: 3rem;
+}
+
+#edu .content h2 {
+  text-transform: uppercase;
+  color: var(--head1);
+  font-size: 25px;
+  line-height: 26px;
+  font-weight: 400;
+  margin: 3rem auto 1rem auto;
+}
+
+#edu .content p {
+  color: white;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 29px;
+}
+
+#edu .content h3 {
+  color: white;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 29px;
+}
+
+#edu hr {
+  margin-top: 3rem;
+}
+
+/* About Me */
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+#about .header h1 {
+  font-size: 52px;
+  line-height: 52px;
+  font-weight: 300;
+  color: var(--head1);
+  margin-top: 3rem;
+}
+
+#about .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% auto 10%;
+      grid-template-columns: 10% auto 10%;
+}
+
+#about .container .content {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+#about .container .content p {
+  margin-top: 4rem;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 29px;
+  border-radius: 20px;
+  padding: 3rem;
+  border-top: 1px solid #1461fb78;
+  border-bottom: 1px solid #e19d5d93;
 }
 
 /* ObserverJS */
