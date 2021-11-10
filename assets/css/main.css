@@ -807,7 +807,13 @@ footer p {
 }
 
 #exp .container {
-  padding: 0 6em;
+  padding: 0 1remem;
+}
+
+@media only screen and (max-width: 800px) {
+  #exp .container {
+    padding: 0 1rem;
+  }
 }
 
 #exp .container .cards {
@@ -831,6 +837,16 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  #exp .container .cards {
+    -ms-grid-columns: 1rem auto auto 1rem;
+        grid-template-columns: 1rem auto auto 1rem;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    grid-gap: 2rem;
   }
 }
 

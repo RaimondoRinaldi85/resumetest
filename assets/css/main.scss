@@ -599,7 +599,10 @@ html{
         }
     }
     .container{
-        padding: 0 6em;
+        padding: 0 1remem;
+        @include small{
+            padding: 0 1rem;
+        }
         .cards{
             margin-top: 5rem;
             display: grid;
@@ -610,6 +613,11 @@ html{
             @include small{
                 display: flex;
                 flex-direction: column;
+            }
+            @include medium{
+                grid-template-columns: 1rem auto auto 1rem;
+                grid-template-rows: auto auto;
+                grid-gap: 2rem;
             }
             .cardIT{
                 text-align: right;
