@@ -2,20 +2,22 @@
 :root {
   --head1: #5385c1;
   --high: #0c315e;
-  --accent1: #e87122ad;
-  --accent2: #5385c19b;
+  --bar: #e87122ad;
+  --bar2: #5385c19b;
   --grigio: #9a9a9a;
   --bianco: #f1f1f1;
+  --blue: #1461fb78;
+  --orange: #e19d5d93;
   --shadow: 2px 2px 12px rgba(0, 0, 0, 0.692);
 }
 
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--accent2);
+  background-color: var(--bar2);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent1);
+  background: var(--bar);
   border-radius: 10px;
 }
 
@@ -1108,8 +1110,8 @@ footer p {
   line-height: 29px;
   border-radius: 20px;
   padding: 3rem;
-  border-top: 1px solid #1461fb78;
-  border-bottom: 1px solid #e19d5d93;
+  border-top: 1px solid var(--blue);
+  border-bottom: 1px solid var(--orange);
 }
 
 /* ObserverJS */
